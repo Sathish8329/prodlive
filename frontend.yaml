@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sathish8329/proengage:1
+        image: sathish8329/proengage:2
         ports:
         - containerPort: 3000
 ---
