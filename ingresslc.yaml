@@ -31,13 +31,3 @@ spec:
             name: lowcode-frontend-service
             port:
               number: 80
-  - host: "varahi.lionsms.com"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: lowcode-frontend-service
-            port:
-              number: 80
