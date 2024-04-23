@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: auth
-        image: sathish8329/proengageauth:9
+        image: sathish8329/proengageauth:10
         ports:
         - containerPort: 8080
 
