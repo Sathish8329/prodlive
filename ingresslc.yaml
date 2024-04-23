@@ -38,6 +38,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: pirapp-frontend-service
+            name: lowcode-frontend-service
             port:
               number: 80
