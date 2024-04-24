@@ -51,3 +51,7 @@ spec:
             name: lowcode-frontend-service
             port:
               number: 80
+  tls:
+  - hosts:
+    - varahi.lionsms.com
+    secretName: varahi-lowcode-lionsms-com-tls
