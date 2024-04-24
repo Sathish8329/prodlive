@@ -31,3 +31,24 @@ spec:
             name: lowcode-frontend-service
             port:
               number: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lowcode-ingress-https
+  namespace: lowcode
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: "varahi.lionsms.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: lowcode-frontend-service
+            port:
+              number: 80
