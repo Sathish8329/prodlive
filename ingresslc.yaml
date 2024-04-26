@@ -76,3 +76,7 @@ spec:
             name: lowcode-frontend-service
             port:
               number: 80
+  tls:
+  - hosts:
+    - engage.kovaion.com
+    secretName: engage-engage-kovaion-com-tls
