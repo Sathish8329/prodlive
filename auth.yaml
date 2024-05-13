@@ -8,6 +8,11 @@ spec:
   selector:
     matchLabels:
       app: auth
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1      
   template:
     metadata:
       labels:
@@ -22,14 +27,14 @@ spec:
           httpGet:
             path: /api
             port: 8080
-          initialDelaySeconds: 180
+          initialDelaySeconds: 120
           periodSeconds: 10
           failureThreshold: 3
         readinessProbe:
           httpGet:
             path: /api
             port: 8080
-          initialDelaySeconds: 30
+          initialDelaySeconds: 130
           periodSeconds: 10
           failureThreshold: 3
 
