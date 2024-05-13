@@ -18,13 +18,7 @@ spec:
         image: sathish8329/proengageauth:13
         ports:
         - containerPort: 8080
-        livenessProbe:
-          httpGet:
-            path: /api
-            port: 8080
-          initialDelaySeconds: 120
-          periodSeconds: 10
-          failureThreshold: 3
+      
 
 ---
 
