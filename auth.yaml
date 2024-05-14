@@ -5,6 +5,11 @@ metadata:
   namespace: lowcode  # Specify the namespace here
 spec:
   replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
   selector:
     matchLabels:
       app: auth   
@@ -18,6 +23,20 @@ spec:
         image: sathish8329/proengageauth:13
         ports:
         - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /auth
+            port: 8080
+          initialDelaySeconds: 120
+          periodSeconds: 10
+          failureThreshold: 3        
+        readinessProbe:  # Add readiness probe
+          httpGet:
+            path: /auth
+            port: 8080
+          initialDelaySeconds: 120
+          periodSeconds: 10
+          failureThreshold: 5  # Set failure threshold to 3
       
 
 ---
