@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: sathish8329/proengageback:28
+        image: sathish8329/proengageback:29
         ports:
         - containerPort: 8000
         livenessProbe:
