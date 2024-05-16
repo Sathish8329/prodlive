@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frtback-deployment-lowcode
+  name: onboarding-deployment-lowcode
   namespace: lowcode
 spec:
   selector:
     matchLabels:
-      app: frtback-lowcode
+      app: onboarding-lowcode
   replicas: 1
   template:
     metadata:
       labels:
-        app: frtback-lowcode
+        app: onboarding-lowcode
     spec:
       containers:
-      - name: frtback
+      - name: onboarding
         image: sathish8329/onboarding:1.0.1
         ports:
         - containerPort: 3000
@@ -23,11 +23,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frt-frtback-service-lowcode
+  name: onboarding-service-lowcode
   namespace: lowcode
 spec:
   selector:
-    app: frtback-lowcode
+    app: onboarding-lowcode
   ports:
     - protocol: TCP
       port: 80
