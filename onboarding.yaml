@@ -1,0 +1,35 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frtback-deployment-lowcode
+  namespace: lowcode
+spec:
+  selector:
+    matchLabels:
+      app: frtback-lowcode
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frtback-lowcode
+    spec:
+      containers:
+      - name: frtback
+        image: sathish8329/onboarding:1.0.1
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frt-frtback-service-lowcode
+  namespace: lowcode
+spec:
+  selector:
+    app: frtback-lowcode
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: NodePort
