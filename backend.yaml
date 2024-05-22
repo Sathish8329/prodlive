@@ -27,14 +27,14 @@ spec:
           httpGet:
             path: /api   # Change this path based on your application's health check endpoint
             port: 8000   # Port where your application is listening
-          initialDelaySeconds:  5 # Delay before first probe
+          initialDelaySeconds:  115 # Delay before first probe
           periodSeconds: 10         # How often to perform the probe
           failureThreshold: 3
         readinessProbe:
           httpGet:
             path: /api
             port: 8000
-          initialDelaySeconds: 5  # Adjust as needed
+          initialDelaySeconds: 115  # Adjust as needed
           periodSeconds: 10
           failureThreshold: 3          
 
