@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sathish8329/proengage:38
+        image: sathish8329/proengage:39
         ports:
         - containerPort: 3000
         readinessProbe:  # Add readiness probe
