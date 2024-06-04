@@ -152,4 +152,8 @@ spec:
             name: lowcode-frontend-service
             port:
               number: 80
+  tls:
+  - hosts:
+    - kovaimarathon.kovaion.org
+    secretName: marathon-tls
 
