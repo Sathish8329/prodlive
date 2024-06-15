@@ -152,22 +152,6 @@ spec:
             name: lowcode-frontend-service
             port:
               number: 80
-    http:
-      paths:
-      - path: /registration
-        pathType: Prefix
-        backend:
-          service:
-            name: registration-service-lowcode
-            port:
-              number: 80
-      - path: /donation
-        pathType: Prefix
-        backend:
-          service:
-            name: registration-service-lowcode
-            port:
-              number: 80
   tls:
   - hosts:
     - kovaimarathon.kovaion.org
