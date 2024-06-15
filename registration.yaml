@@ -1,0 +1,36 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registration-deployment-lowcode
+  namespace: lowcode
+spec:
+  selector:
+    matchLabels:
+      app: registration-lowcode
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: registration-lowcode
+    spec:
+      containers:
+      - name: registration
+        image: sathish8329/registration
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: registration-service-lowcode
+  namespace: lowcode
+spec:
+  selector:
+    app: registration-lowcode
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: NodePort
