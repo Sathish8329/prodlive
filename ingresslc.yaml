@@ -171,7 +171,7 @@ spec:
   - host: "kovaimarathon.kovaion.ai"
     http:
       paths:
-      - path: /registration
+      - path: /
         pathType: Prefix
         backend:
           service:
