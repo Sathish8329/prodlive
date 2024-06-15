@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: registration
-        image: sathish8329/registration
+        image: sathish8329/registration:1
         ports:
         - containerPort: 3000
 ---
