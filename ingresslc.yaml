@@ -185,7 +185,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: registration-service-lowcode
+            name: registration-service-lowcode-1
             port:
               number: 80
 
