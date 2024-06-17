@@ -181,10 +181,4 @@ spec:
             name: registration-service-lowcode
             port:
               number: 80
-      - path: /kovaimarathon
-        pathType: Prefix
-        backend:
-          service:
-            name: registration-service-lowcode
-            port:
-              number: 80
+
