@@ -79,6 +79,13 @@ spec:
             name: onboarding-service-lowcode
             port:
               number: 80
+      - path: /search
+        pathType: Prefix
+        backend:
+          service:
+            name: lowcode-api-service
+            port:
+              number: 8108
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
