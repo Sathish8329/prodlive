@@ -24,7 +24,7 @@ spec:
         args:
         - --data-dir
         - /data
-        - --api-key=xyz
+        - --api-key=kovaion
       volumes:
       - name: data-volume
         hostPath:
