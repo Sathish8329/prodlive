@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: auth
-        image: sathish8329/proengageauth:24
+        image: sathish8329/proengageauth:25
         ports:
         - containerPort: 8080
         livenessProbe:
