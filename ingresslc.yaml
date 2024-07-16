@@ -78,7 +78,7 @@ spec:
           service:
             name: onboarding-service-lowcode
             port:
-              number: 5001
+              number: 3000
       - path: /search
         pathType: Prefix
         backend:
