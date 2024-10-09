@@ -168,4 +168,24 @@ spec:
 
 ---
 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lowcode-apitoken-ingress
+  namespace: lowcode
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/proxy-body-size: "100m" # Set the maximum allowed request body size to 100 MB
+spec:
+  rules:
+  - host: "api.kovaion.ai"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: lowcode-apitoken-service
+            port:
+              number: 8009
 
