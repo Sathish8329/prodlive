@@ -187,5 +187,5 @@ spec:
           service:
             name: lowcode-apitoken-service
             port:
-              number: 8009
+              number: 80
 
