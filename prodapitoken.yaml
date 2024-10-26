@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: apitoken
-        image: sathish8329/apitoken:v3
+        image: sathish8329/apitoken:v4
         ports:
         - containerPort: 8009
         livenessProbe:
