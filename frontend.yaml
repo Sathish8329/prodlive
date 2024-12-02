@@ -18,6 +18,8 @@ spec:
       labels:
         app: frontend
     spec:
+      nodeSelector:                            
+        eks.amazonaws.com/nodegroup: new-kovaion-ngg    
       containers:
       - name: frontend
         image: sathish8329/proengage:195
