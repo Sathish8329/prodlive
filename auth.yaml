@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: new-kovaion-ngg    
       containers:
       - name: auth
-        image: sathish8329/proengageauth:36
+        image: sathish8329/proengageauth:37
         ports:
         - containerPort: 8080
         livenessProbe:
