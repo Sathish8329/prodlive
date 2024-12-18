@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: onboarding
-        image: sathish8329/onboarding:1.0.930
+        image: sathish8329/onboarding:1.0.931
         ports:
         - containerPort: 3000
 ---
