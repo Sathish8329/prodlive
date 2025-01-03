@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: new-kovaion-ngg    
       containers:
       - name: frontend
-        image: sathish8329/proengage:210
+        image: sathish8329/proengage:211
         ports:
         - containerPort: 5001
         readinessProbe:  # Add readiness probe
