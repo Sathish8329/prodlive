@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: new-kovaion-ngg 
       containers:
       - name: api
-        image: sathish8329/proengageback:180
+        image: sathish8329/proengageback:181
         ports:
         - containerPort: 8000
         livenessProbe:
