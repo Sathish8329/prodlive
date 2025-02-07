@@ -19,12 +19,22 @@ spec:
         app: api
     spec:
       nodeSelector:                            
-        eks.amazonaws.com/nodegroup: new-kovaion-ngg 
+        eks.amazonaws.com/nodegroup: preprod 
       containers:
       - name: api
         image: sathish8329/proengageback:194
         ports:
         - containerPort: 8000
+        resources:
+          requests:
+            memory: "2Gi"    # Increased initial memory request
+            cpu: "500m"
+          limits:
+            memory: "4Gi"    # Increased memory limit
+            cpu: "1000m"
+        env:
+          - name: NODE_OPTIONS
+            value: "--max-old-space-size=3072"  # Set Node.js heap limit to 3GB        
         livenessProbe:
           httpGet:
             path: /api   # Change this path based on your application's health check endpoint
