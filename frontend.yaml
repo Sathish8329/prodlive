@@ -25,6 +25,13 @@ spec:
         image: sathish8329/proengage:235
         ports:
         - containerPort: 5001
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "4Gi"
+            cpu: "1000m"        
         readinessProbe:  # Add readiness probe
           httpGet:
             path: /
