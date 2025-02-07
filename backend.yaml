@@ -19,7 +19,7 @@ spec:
         app: api
     spec:
       nodeSelector:                            
-        eks.amazonaws.com/nodegroup: preprod 
+        eks.amazonaws.com/nodegroup: new-kovaion-ngg 
       containers:
       - name: api
         image: sathish8329/proengageback:194
