@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: prod-private 
       containers:
       - name: api
-        image: sathish8329/proengageback:1745
+        image: sathish8329/proengageback:1833
         ports:
         - containerPort: 8000    
         livenessProbe:
