@@ -19,7 +19,7 @@ spec:
         app: api
     spec:
       nodeSelector:                            
-        eks.amazonaws.com/nodegroup: gpu-on-demand-ng # prod-private 
+        eks.amazonaws.com/nodegroup: prod-private 
       containers:
       - name: api
         image: sathish8329/proengageback:3735
