@@ -18,8 +18,8 @@ spec:
       labels:
         app: cron-lowcode
     spec:
-      nodeSelector:                            
-        eks.amazonaws.com/nodegroup: stage-private   
+      # nodeSelector:                            
+      #   eks.amazonaws.com/nodegroup: stage-private   
       containers:
       - name: cron-lowcode
         image: sathish8329/cronprod:11
