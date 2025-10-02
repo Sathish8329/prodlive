@@ -25,13 +25,13 @@ spec:
         image: sathish8329/proengageback:4266
         ports:
         - containerPort: 8000
-        resources:                    # ← MOVE THIS INSIDE THE CONTAINER
-          requests:
-            cpu: 1000m
-            memory: 1Gi
-          limits:
-            cpu: 500m
-            memory: 2Gi
+        # resources:                    # ← MOVE THIS INSIDE THE CONTAINER
+        #   requests:
+        #     cpu: 1000m
+        #     memory: 1Gi
+        #   limits:
+        #     cpu: 500m
+        #     memory: 2Gi
         livenessProbe:
           httpGet:
             path: /api
