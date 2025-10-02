@@ -27,17 +27,18 @@ spec:
         - containerPort: 8000
         resources:                    # ← MOVE THIS INSIDE THE CONTAINER
           requests:
-            cpu: 50m
-            memory: 512Mi
-          limits:
-            cpu: 200m
+            cpu: 1000m
             memory: 1Gi
+          limits:
+            cpu: 500m
+            memory: 2Gi
         livenessProbe:
           httpGet:
             path: /api
             port: 8000
           initialDelaySeconds: 5
           periodSeconds: 10
+          timeoutSeconds: 5
           failureThreshold: 3
         readinessProbe:
           httpGet:
@@ -45,6 +46,7 @@ spec:
             port: 8000
           initialDelaySeconds: 5
           periodSeconds: 10
+          timeoutSeconds: 5
           failureThreshold: 3
          
 
