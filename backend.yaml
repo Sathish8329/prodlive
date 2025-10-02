@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api-deployment
-  namespace: lowcode  # Specify the namespace here
+  namespace: lowcode
 spec:
   replicas: 3
   selector:
@@ -12,33 +12,41 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
-      maxSurge: 1      
+      maxSurge: 1
   template:
     metadata:
       labels:
         app: api
     spec:
-      nodeSelector:                            
-        eks.amazonaws.com/nodegroup: prod-private 
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: prod-private
       containers:
       - name: api
         image: sathish8329/proengageback:4266
         ports:
-        - containerPort: 8000    
+        - containerPort: 8000
+        resources:                    # ← MOVE THIS INSIDE THE CONTAINER
+          requests:
+            cpu: 50m
+            memory: 512Mi
+          limits:
+            cpu: 200m
+            memory: 1Gi
         livenessProbe:
           httpGet:
-            path: /api   # Change this path based on your application's health check endpoint
-            port: 8000   # Port where your application is listening
-          initialDelaySeconds:  5 # Delay before first probe
-          periodSeconds: 10         # How often to perform the probe
+            path: /api
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
           failureThreshold: 3
         readinessProbe:
           httpGet:
             path: /api
             port: 8000
-          initialDelaySeconds: 5  # Adjust as needed
+          initialDelaySeconds: 5
           periodSeconds: 10
-          failureThreshold: 3          
+          failureThreshold: 3
+         
 
 ---
 
