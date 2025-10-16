@@ -25,13 +25,13 @@ spec:
         image: sathish8329/proengage:4561
         ports:
         - containerPort: 5001  
-        readinessProbe:  # Add readiness probe
-          httpGet:
-            path: /
-            port: 5001
-          initialDelaySeconds: 30
-          periodSeconds: 10
-          failureThreshold: 3  # Set failure threshold to 3
+        # readinessProbe:  # Add readiness probe
+        #   httpGet:
+        #     path: /
+        #     port: 5001
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
+        #   failureThreshold: 3  # Set failure threshold to 3
 ---
 apiVersion: v1
 kind: Service
