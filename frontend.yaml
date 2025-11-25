@@ -18,8 +18,8 @@ spec:
       labels:
         app: frontend
     spec:
-      nodeSelector:                            
-        eks.amazonaws.com/nodegroup: prod-private    
+      # nodeSelector:                            
+      #   eks.amazonaws.com/nodegroup: prod-private    
       containers:
       - name: frontend
         image: sathish8329/proengage:4631
