@@ -18,8 +18,8 @@ spec:
       labels:
         app: cron-lowcode
     spec:
-      nodeSelector:                            
-        eks.amazonaws.com/nodegroup: kovaion-stage-private-ng-new   
+      # nodeSelector:                            
+      #   eks.amazonaws.com/nodegroup: kovaion-stage-private-ng-new   
       containers:
       - name: cron-lowcode
         image: sathish8329/cronprod:11
