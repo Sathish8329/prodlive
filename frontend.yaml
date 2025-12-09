@@ -22,7 +22,7 @@ spec:
       #   eks.amazonaws.com/nodegroup: prod-private    
       containers:
       - name: frontend
-        image: sathish8329/proengage:4631
+        image: sathish8329/proengage:4631 # 627133981011.dkr.ecr.ap-south-1.amazonaws.com/proengage:4631
         ports:
         - containerPort: 5001  
         # readinessProbe:  # Add readiness probe
