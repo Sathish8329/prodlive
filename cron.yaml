@@ -22,7 +22,7 @@ spec:
       #   eks.amazonaws.com/nodegroup: kovaion-stage-private-ng-new   
       containers:
       - name: cron-lowcode
-        image: sathish8329/cronprod:11
+        image: 627133981011.dkr.ecr.ap-south-1.amazonaws.com/cron:11
         ports:
         - containerPort: 9000
         livenessProbe:
