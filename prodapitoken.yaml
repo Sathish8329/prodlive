@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: apitoken
-        image: sathish8329/apitoken:1411
+        image: 627133981011.dkr.ecr.ap-south-1.amazonaws.com/apitoken:1411
         ports:
         - containerPort: 8009
         livenessProbe:
