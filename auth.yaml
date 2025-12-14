@@ -22,7 +22,7 @@ spec:
       #   eks.amazonaws.com/nodegroup: prod-private    
       containers:
       - name: auth
-        image: sathish8329/proengageauth:39 # 627133981011.dkr.ecr.ap-south-1.amazonaws.com/proengageauth:39
+        image: 627133981011.dkr.ecr.ap-south-1.amazonaws.com/proengageauth:39
         ports:
         - containerPort: 8080
         livenessProbe:
