@@ -22,7 +22,7 @@ spec:
       #   eks.amazonaws.com/nodegroup: prod-private
       containers:
       - name: api
-        image: sathish8329/proengageback:5339 # 627133981011.dkr.ecr.ap-south-1.amazonaws.com/proengageback:4564
+        image: 627133981011.dkr.ecr.ap-south-1.amazonaws.com/proengageback:5339
         ports:
         - containerPort: 8000
         resources:                    # ← MOVE THIS INSIDE THE CONTAINER
